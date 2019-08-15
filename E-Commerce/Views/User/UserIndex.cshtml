@@ -1,0 +1,53 @@
+﻿@model E_Commerce.Models.User
+
+@{
+    ViewBag.Title = "UserIndex";
+   
+}
+
+<h2>UserIndex</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Register")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Password)
+        </th>
+        @*<th>
+            @Html.DisplayNameFor(model => model.CPassword)
+        </th>*@
+        <th></th>
+    </tr>
+
+    @*@foreach (var item in model)
+        {*@
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => Model.Password)
+        </td>
+        @*<td>
+                @Html.DisplayFor(model => item.CPassword)
+            </td>*@
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+            @*@Html.ActionLink("Details", "Details", new { id = Model.ID }) |*@
+            @Html.ActionLink("Details", "Details", new { id = Model.ID })
+        </td>
+    </tr>
+    @*}*@
+
+</table>

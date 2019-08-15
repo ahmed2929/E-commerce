@@ -144,9 +144,14 @@
     <Compile Include="Migrations\201908051430083_third.Designer.cs">
       <DependentUpon>201908051430083_third.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201908071337304_UserUP.cs" />
+    <Compile Include="Migrations\201908071337304_UserUP.Designer.cs">
+      <DependentUpon>201908071337304_UserUP.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\E_CommerceContext.cs" />
     <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\tempProduct.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -188,17 +193,23 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Users\Create.cshtml" />
-    <Content Include="Views\Users\Delete.cshtml" />
-    <Content Include="Views\Users\Details.cshtml" />
-    <Content Include="Views\Users\Edit.cshtml" />
-    <Content Include="Views\Users\Index.cshtml" />
     <Content Include="Views\Products\Create.cshtml" />
     <Content Include="Views\Products\Delete.cshtml" />
     <Content Include="Views\Products\Details.cshtml" />
     <Content Include="Views\Products\Edit.cshtml" />
     <Content Include="Views\Products\Index.cshtml" />
     <Content Include="Views\Products\Shop.cshtml" />
+    <Content Include="Views\Products\Cart.cshtml" />
+    <Content Include="Views\User\Delete.cshtml" />
+    <Content Include="Views\User\Edit.cshtml" />
+    <Content Include="Views\User\Details.cshtml" />
+    <Content Include="Views\User\Home.cshtml" />
+    <Content Include="Views\User\Login.cshtml" />
+    <Content Include="Views\User\Register.cshtml" />
+    <Content Include="Views\User\UserIndex.cshtml" />
+    <Content Include="Views\User\WelcomHome.cshtml" />
+    <Content Include="Views\Products\AdminIndex.cshtml" />
+    <Content Include="Views\User\WelcomeHome.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -225,6 +236,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201908051430083_third.resx">
       <DependentUpon>201908051430083_third.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201908071337304_UserUP.resx">
+      <DependentUpon>201908071337304_UserUP.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

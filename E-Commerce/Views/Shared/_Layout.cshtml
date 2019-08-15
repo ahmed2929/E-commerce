@@ -24,9 +24,26 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="/products/shop">Home</a></li>
-                    <li>@Html.ActionLink("car", "car", "car")</li>
-                    <li>@Html.ActionLink("logout", "logout", "logut")</li>
+                    @if (Session["email"] == null)
+                    {
+                        <li><a href="/User/WelcomeHome">Home</a></li>
+                        <li><a href="/User/Login">login</a></li>
+                        <li><a href="/User/Register">Register</a></li>
+                    }
+                    else if (Session["email"].ToString() == "admin@admin.com")
+                    {
+                        <li><a href="/products/AdminIndex">Home</a></li>
+                        <li><a href="/products/shop">shop</a></li>
+                        <li><a href="/User/LogOut">logout</a></li>
+                    }
+                    else
+                    {
+
+                        <li><a href="/products/shop">shop</a></li>
+                        <li><a href="/products/cart">cart</a></li>
+                        <li><a href="/User/LogOut">logout</a></li>
+
+                    }
 
 
                     @*<li>@Html.ActionLink("logout", "Contact", "Home")</li>*@
@@ -35,11 +52,11 @@
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class="container body-content" style="margin-top:50px">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy;AK</p>
         </footer>
     </div>
 

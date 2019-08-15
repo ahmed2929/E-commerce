@@ -20,6 +20,14 @@
         </dd>
 
         <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
             @Html.DisplayNameFor(model => model.Password)
         </dt>
 
@@ -28,29 +36,22 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.IsAdmin)
+            @Html.DisplayNameFor(model => model.CPassword)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.IsAdmin)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
+            @Html.DisplayFor(model => model.CPassword)
         </dd>
 
     </dl>
 
-    @using (Html.BeginForm()) {
+    @using (Html.BeginForm())
+    {
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color">
             <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+            @Html.ActionLink("Back to List", "UserIndex")
         </div>
     }
 </div>

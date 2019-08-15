@@ -1,0 +1,61 @@
+﻿@model IEnumerable<E_Commerce.Models.tempProduct>
+
+@{
+    ViewBag.Title = "cart";
+}
+
+<h2>cart</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayName("total price")
+        </th>
+        <th>
+            @Html.DisplayName("items")
+        </th>
+
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.name)
+    </td>
+
+    <td>
+        @Html.DisplayFor(modelItem => item.price)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.totalPrice)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Pcounter)
+
+    </td>
+
+    <td>
+
+        @Html.ActionLink("Delete", "DeleteFromCart", new { id = item.ID })
+        @Html.ActionLink("add another pice", "addAnotherToCart", new { id = item.ID })
+        @Html.ActionLink("confirm", "ConfirmPay", new { id = item.ID })
+
+    </td>
+</tr>
+   
+
+
+    }
+
+
+</table>
